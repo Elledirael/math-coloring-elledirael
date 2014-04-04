@@ -4,7 +4,8 @@
 
     var settings = {
         columns: 2,
-        rows: 5,        
+        rows: 5,
+        name: 'default',        
         colors: ['#BABEBA','#A1F3C0','#3AC06E','#49B351','#0EAD1B'],
         colors_number: 5,
 
@@ -35,6 +36,11 @@
               //I want to add some validation to the each setting
               if(rows) {
                 settings.rows = rows;
+              }
+
+              name = $('input.table_name').val();
+              if(name) {
+                settings.name = name;
               }
 
               columns = $('.table_size input.columns').val();
@@ -81,8 +87,7 @@
 
                 //set behavior of cells
                 $('.'+_className+' td').on('click', function() {        
-                  var color = $(this).data('color');
-                  console.log(color);
+                  var color = $(this).data('color');                  
                   color++; 
                   color = color % settings.colors_number;
                   $(this).data("color", color);       
