@@ -3,7 +3,7 @@
     var _className = 'table_coloring';
 
     var settings = {
-        columns: 2,
+        columns: 6,
         rows: 5,
         name: 'default',        
         colors: ['#BABEBA','#A1F3C0','#3AC06E','#49B351','#0EAD1B'],
